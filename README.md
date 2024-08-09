@@ -1,70 +1,57 @@
 # Groq Chat Streamlit App
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://groqdemo.streamlit.app/)
+![robotzia](images/robotzia.webp)
 
-![Demo App Screenshot](images/groq_demo.png)
+Este aplicativo [Streamlit](https://streamlit.io/) integra-se com a [Groq API](https://groq.com/) para fornecer uma interface de chat onde os usuários podem interagir com modelos de linguagem avançados. Ele permite que os usuários escolham entre dois modelos para gerar respostas, melhorando a flexibilidade e a experiência do usuário no chat.
 
-This [Streamlit](https://streamlit.io/) app integrates with the [Groq API](https://groq.com/) to provide a chat interface where users can interact with advanced language models. It allows users to choose between two models for generating responses, enhancing the flexibility and user experience of the chat application.
+## Funcionalidades
 
-It is blazing FAST; try it and see! 🏎️ 💨 💨 💨
+- **Escolha de Modelos**: Selecione entre diferentes modelos de linguagem para se adaptar às suas necessidades.
+- **Interface de Chat**: Uma interface de usuário limpa e intuitiva para uma interação suave.
+- **Histórico de Conversas**: Visualize as interações passadas para referência futura.
+- **Personalização**: Ajuste as configurações do modelo para otimizar a experiência de chat.
 
-**Check out the video tutorial 👇**
+## Requisitos
 
-<a href="https://youtu.be/WQvinJGYk90">
-  <img src="https://img.youtube.com/vi/WQvinJGYk90/hqdefault.jpg" alt="Watch the video" width="100%">
-</a>
+- Python 3.8 ou superior
+- Conta na Groq API
+- Dependências listadas no arquivo `requirements.txt`
 
-## Features
+## Instalação
 
-- **Model Selection**: Users can select between `mixtral-8x7b-32768`, `llama2-70b-4096`, `Gemma-7b-it`, `llama2-70b-4096`, `llama3-70b-8192`, and `lama3-8b-8192` models to tailor the conversation according to each model's capabilities.
-- **Chat History**: The app maintains a session-based chat history, allowing for a continuous conversation flow during the app session.
-- **Dynamic Response Generation**: Utilizes a generator function to stream responses from the Groq API, providing a seamless chat experience.
-- **Error Handling**: Implements try-except blocks to handle potential errors gracefully during API calls.
+1. Clone o repositório:
+    ```bash
+    git clone https://github.com/seu-usuario/groq-chat-app.git
+    ```
+2. Navegue até o diretório do projeto:
+    ```bash
+    cd groq-chat-app
+    ```
+3. Instale as dependências:
+    ```bash
+    pip install -r requirements.txt
+    ```
+4. Execute o aplicativo:
+    ```bash
+    streamlit run app.py
+    ```
 
-## Requirements
+## Configuração
 
-- Streamlit
-- Groq Python SDK
-- Python 3.7+
+Certifique-se de configurar suas credenciais da API Groq no arquivo `.env`:
 
-## Setup and Installation
-
-- **Install Dependencies**:
-
-  ```bash
-  pip install streamlit groq
-  ```
-
-- **Set Up Groq API Key**:
-
-  Ensure you have an API key from Groq. This key should be stored securely using Streamlit's secrets management:
-
-  ```toml
-  # .streamlit/secrets.toml
-  GROQ_API_KEY="your_api_key_here"
-  ```
-
-- **Run the App**:
-  Navigate to the app's directory and run:
-
-```bash
-streamlit run streamlit_app.py
+```env
+GROQ_API_KEY=your_api_key_here
+GROQ_API_URL=
 ```
 
-## Usage
+## Uso
 
-Upon launching the app, you are greeted with a title and a model selection dropdown.
+Após a instalação e configuração, você pode acessar o aplicativo via `http://localhost:8501` em seu navegador. Escolha o modelo desejado, insira sua mensagem e interaja com o modelo diretamente pelo chat.
 
-After choosing a preferred model, you can interact with the chat interface by entering prompts.
+## Licença
+Este projeto está licenciado sob a [MIT License](LICENSE).
 
-The app displays the user's questions and the AI's responses, facilitating a back-and-forth conversation.
+## Contato
 
-## Customization
-
-The app can be easily customized to include additional language models (as Groq adds more), alter the user interface, or extend the functionality to incorporate other interactions with the Groq API.
-
-## Contributing
-
-Contributions are welcome to enhance the app, fix bugs, or improve documentation.
-
-Please feel free to fork the repository, make changes, and submit a pull request.
+Para questões e sugestões, entre em contato pelo e-mail: contato@groq.com
