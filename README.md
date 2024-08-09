@@ -11,31 +11,36 @@ Este aplicativo [Streamlit](https://streamlit.io/) integra-se com a [Groq API](h
 - **Histórico de Conversas**: Visualize as interações passadas para referência futura.
 - **Personalização**: Ajuste as configurações do modelo para otimizar a experiência de chat.
 
-## Requisitos
+- Streamlit
+- Groq Python SDK
+- Python 3.7+
 
-- Python 3.8 ou superior
-- Conta na Groq API
-- Dependências listadas no arquivo `requirements.txt`
+## Setup and Installation
 
-## Instalação
+- **Install Dependencies**:
 
-1. Clone o repositório:
-    ```bash
-    git clone https://github.com/seu-usuario/groq-chat-app.git
-    ```
+  ```bash
+  pip install streamlit groq
+  ```
+  - **Set Up Groq API Key**:
+
+  Ensure you have an API key from Groq. This key should be stored securely using Streamlit's secrets management:
+
+  ```toml
+  # .streamlit/secrets.toml
+  GROQ_API_KEY="your_api_key_here"
+  ```
 2. Navegue até o diretório do projeto:
+
     ```bash
-    cd groq-chat-app
-    ```
-3. Instale as dependências:
-    ```bash
-    pip install -r requirements.txt
+    cd groq-streamlit
     ```
 4. Execute o aplicativo:
-    ```bash
-    streamlit run app.py
-    ```
 
+    ```bash
+    streamlit run streamlit_app.py
+    ```
+    
 ## Configuração
 
 Certifique-se de configurar suas credenciais da API Groq no arquivo `.env`:
@@ -46,7 +51,6 @@ GROQ_API_URL=
 ```
 
 ## Uso
-
 Após a instalação e configuração, você pode acessar o aplicativo via `http://localhost:8501` em seu navegador. Escolha o modelo desejado, insira sua mensagem e interaja com o modelo diretamente pelo chat.
 
 ## Licença
