@@ -28,6 +28,13 @@ textArea='''
   * [  ] Tarefa 5 - 
 '''
 st.markdown(textArea)
+
+#########################
+# To-do
+
+
+#########################
+
 client = Groq(
     api_key=st.secrets["GROQ_API_KEY"],
 )
